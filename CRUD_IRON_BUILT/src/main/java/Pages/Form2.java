@@ -14,7 +14,7 @@ public class Form2 extends Common_Element_Methods {
 
 	// Overriding locators for Form2-specific fields
 	protected By firstName = By
-			.cssSelector("p[style='clear:both;float:left;width:50%;'] .wpcf7-form-control[name='fname']");
+			.cssSelector("input.wpcf7-form-control.wpcf7-text[placeholder=\"FIRST NAME*\"][name=\"fname\"]");
 	protected By lastName = By
 			.cssSelector("input.wpcf7-form-control.wpcf7-text[placeholder=\"LAST NAME*\"][name=\"lname\"]");
 	protected By emailName = By
