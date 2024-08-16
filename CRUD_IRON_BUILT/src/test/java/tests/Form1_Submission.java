@@ -18,7 +18,7 @@ public class Form1_Submission extends BaseTest {
 	@Test(priority = 1)
 	public void testForm1Submission() {
 		test = extent.createTest("Form 1 Submission Test", "Testing submission of Form 1");
-		System.out.println("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"); // GITHUB TOKEN
+
 		try {
 			if (driver == null) {
 				test.log(Status.FAIL, "WebDriver is not initialized.");
