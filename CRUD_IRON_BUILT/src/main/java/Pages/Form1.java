@@ -172,7 +172,7 @@ public class Form1 {
 
 			WebElement leadsHeaderEl = wait.until(ExpectedConditions.visibilityOfElementLocated(leadsListHeader));
 			System.out.println(leadsHeaderEl.getText());
-			System.out.println("Test log done");
+			System.out.println("Test log  done");
 			return true;
 		} catch (Exception e) {
 			String failureMessage = "Login failed: " + e.getMessage();
