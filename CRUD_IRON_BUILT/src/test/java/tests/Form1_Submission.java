@@ -21,7 +21,7 @@ public class Form1_Submission extends BaseTest {
 
 		try {
 			if (driver == null) {
-				test.log(Status.FAIL, "WebDriver is not initialized.");
+				test.log(Status.FAIL, "WebDriver is not initialized currently");
 				throw new NullPointerException("WebDriver is not initialized.");
 			}
 
