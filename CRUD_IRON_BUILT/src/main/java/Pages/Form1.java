@@ -103,7 +103,7 @@ public class Form1 {
 			element.sendKeys(text);
 		} catch (Exception e) {
 			System.out.println("Inside Enter Text catch");
-			String failureMessage = "Failed to enter text in element: " + locator + " - " + e.getMessage();
+			String failureMessage = "Failed to enter text in element : " + locator + " - " + e.getMessage();
 			test.log(Status.FAIL, failureMessage);
 			Assert.fail(failureMessage);
 		}

@@ -38,7 +38,7 @@ public class BaseTest {
 		extent = new ExtentReports();
 		spark = new ExtentSparkReporter("target/ExtentReports.html");
 		extent.attachReporter(spark);
-		System.out.println("ExtentReports suite setup complete.");
+		System.out.println("ExtentReports suite setup is complete.");
 	}
 
 	@BeforeMethod
@@ -46,7 +46,7 @@ public class BaseTest {
 		System.out.println("Starting setup of WebDriver and test case...");
 		driver = WebDriverManager.getDriver();
 		if (driver == null) {
-			System.out.println("WebDriver initialization failed.");
+			System.out.println("WebDriver initialization has failed.");
 		} else {
 			System.out.println("WebDriver initialized successfully.");
 		}

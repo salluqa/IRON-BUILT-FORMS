@@ -17,7 +17,7 @@ public class Form1_Submission extends BaseTest {
 
 	@Test(priority = 1)
 	public void testForm1Submission() {
-		test = extent.createTest("Form 1 Submission Test", "Testing submission of Form 1");
+		test = extent.createTest("Form 1 Submission Test ", "Testing submission of Form 1");
 
 		try {
 			if (driver == null) {
