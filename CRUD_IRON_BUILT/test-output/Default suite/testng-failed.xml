@@ -6,8 +6,8 @@
       <class name="tests.Form1_Submission">
         <methods>
           <include name="tearDownSuite"/>
-          <include name="testForm2Submission"/>
           <include name="setUpSuite"/>
+          <include name="testForm1Submission"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
