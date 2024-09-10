@@ -111,6 +111,7 @@ public class Form1 {
 
 	private void selectRandomOption(By dropdownLocator) {
 		try {
+			Thread.sleep(1000);
 			WebElement dropdownElement = wait.until(ExpectedConditions.visibilityOfElementLocated(dropdownLocator));
 			Assert.assertTrue(dropdownElement.isDisplayed());
 			Select dropdown = new Select(dropdownElement);
@@ -168,7 +169,7 @@ public class Form1 {
 			usernameEl.sendKeys(username);
 			passwordEl.sendKeys(password);
 			loginBtn.click();
-			Thread.sleep(20000);
+			Thread.sleep(35000);
 
 			WebElement leadsHeaderEl = wait.until(ExpectedConditions.visibilityOfElementLocated(leadsListHeader));
 			System.out.println(leadsHeaderEl.getText());

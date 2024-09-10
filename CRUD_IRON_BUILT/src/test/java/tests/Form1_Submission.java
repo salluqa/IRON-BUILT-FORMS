@@ -2,9 +2,7 @@ package tests;
 
 import java.awt.Desktop;
 import java.io.File;
-import java.time.Duration;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -43,14 +41,22 @@ public class Form1_Submission extends BaseTest {
 			formPage1.enterZip("12345");
 
 			// Select dropdown options
+			formPage1.selectState();
 			formPage1.selectBuildingUse();
 			formPage1.selectDateToBuild();
-			formPage1.selectState();
-
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			Thread.sleep(500);
 			formPage1.clickSubmitButton();
 			Thread.sleep(10000);
+			String currentUrl = driver.getCurrentUrl();
+			Assert.assertTrue(currentUrl.equals("https://westeros.rolustech.com:44325/thankyou/"),
+					"URL did not change as expected.");
 
+			// If the URL matches, print "Record created"
+			if (currentUrl.equals("https://westeros.rolustech.com:44325/thankyou/")) {
+				test.log(Status.PASS, "Form has been submitted succesfully");
+			} else {
+				test.log(Status.FAIL, "Form submission failed");
+			}
 			// Verify the success criteria
 			driver.get("http://18.235.97.223/SugarCRM-Staging/#Leads");
 			boolean loginResult = formPage1.login("eversafe38", "Esu$er#38");
